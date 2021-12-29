@@ -28,6 +28,7 @@ public class App {
             playername.resetSize();
         }
     }
+
     public static void main(String[] args) throws Exception {
         //Create two player objects
         player p1 = new player("Todd",5);
@@ -52,6 +53,7 @@ public class App {
             System.out.println("2. Take Damage");
             System.out.println("3. Check Size");
             System.out.println("4. Eat Another Player");
+            System.out.println("5. Reset Test Characters");
             System.out.println("9. Exit");
             System.out.print("Choice: ");
             choice = input.nextInt();
@@ -59,26 +61,75 @@ public class App {
             //Switch statement to handle the user's choice
             switch (choice) {
                 case 1:
+                    System.out.print(" ");
+                    System.out.print("Eat Food: Selected");
+                    System.out.print(" ");
+                
                     game.pickupFood(p1);
                     game.pickupFood(p2);
+
+                    System.out.println("\nPlayer 1 Ate, Current Size: " + p1.getSize());
+                    System.out.println("\nPlayer 2 Ate, Current Size: " + p2.getSize());
+
+                    System.out.print(" ");
+                    System.out.print(" ");
                     break;
                 case 2:
+
+                    System.out.print(" ");
+                    System.out.print("Damage Players: Selected");
+                    System.out.print(" ");
+
                     game.takeDamage(p1);
                     game.takeDamage(p2);
+
+                    System.out.println("\nPlayer 1 Damaged, Current Size: " + p1.getSize());
+                    System.out.println("\nPlayer 2 Damaged, Current Size: " + p2.getSize());
+
+                    System.out.print(" ");
+                    System.out.print(" ");
                     break;
                 case 3:
-                    System.out.println("Player 1 Size: " + p1.getSize());
-                    System.out.println("Player 2 Size: " + p2.getSize());
+                    System.out.print(" ");
+                    System.out.print("Check Size: Selected");
+                    System.out.print(" ");
+
+                    System.out.println("\nPlayer 1 Size: " + p1.getSize());
+                    System.out.println("\nPlayer 2 Size: " + p2.getSize());
+
+                    System.out.print(" ");
+                    System.out.print(" ");
                     break;
                 case 4:
+                    System.out.print(" ");
+                    System.out.print("\nEat Another Player: Selected");
+                    System.out.print(" ");
+
                     game.eatPlayer(p1, p2);
                    
+                    break;
+                case 5:
+                    System.out.print(" ");
+                    System.out.print("\nReset Test Characters: Selected");
+                    System.out.print(" ");
+
+                    p1.resetSize();
+                    p2.resetSize();
+
+                    System.out.println("\nPlayer 1 Size: " + p1.getSize());
+                    System.out.println("\nPlayer 2 Size: " + p2.getSize());
+
+                    System.out.print(" ");
+                    System.out.print(" ");
                     break;
                 case 9:
                     System.out.println("Exiting...");
                     break;
                 default:
+                    System.out.print(" ");
                     System.out.println("Invalid choice");
+                    System.out.print(" ");
+
                     break;
             }
         }
