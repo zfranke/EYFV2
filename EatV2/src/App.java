@@ -7,7 +7,7 @@ public class App {
         Random rand = new Random();
         // If player size is less then 1, add a random number to the players size to
         // simulate food pickup
-        if (playername.getSize() < 1) {
+        if (playername.getSize() > 1) {
             playername.setSize(playername.getSize() + rand.nextInt(10));
         }
 
@@ -72,7 +72,7 @@ public class App {
                     break;
                 case 4:
                     game.eatPlayer(p1, p2);
-                    game.eatPlayer(p2, p1);
+                   
                     break;
                 case 9:
                     System.out.println("Exiting...");
