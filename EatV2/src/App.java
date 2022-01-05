@@ -102,7 +102,9 @@ public class App {
                     break;
                 case 4:
                     System.out.print(" ");
+                    System.out.print(" ");
                     System.out.print("\nEat Another Player: Selected");
+                    System.out.print(" ");
                     System.out.print(" ");
 
                     game.eatPlayer(p1, p2);
@@ -110,7 +112,9 @@ public class App {
                     break;
                 case 5:
                     System.out.print(" ");
+                    System.out.print(" ");
                     System.out.print("\nReset Test Characters: Selected");
+                    System.out.print(" ");
                     System.out.print(" ");
 
                     p1.resetSize();
@@ -123,11 +127,17 @@ public class App {
                     System.out.print(" ");
                     break;
                 case 9:
+                    System.out.print(" ");
+                    System.out.print(" ");
                     System.out.println("Exiting...");
+                    System.out.print(" ");
+                    System.out.print(" ");
                     break;
                 default:
                     System.out.print(" ");
+                    System.out.print(" ");
                     System.out.println("Invalid choice");
+                    System.out.print(" ");
                     System.out.print(" ");
 
                     break;
