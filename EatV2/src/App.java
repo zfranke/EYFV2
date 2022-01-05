@@ -22,10 +22,10 @@ public class App {
     public void eatPlayer(player playername, player player2) {
         if (playername.getSize() > player2.getSize()) {
             System.out.println(playername.getName() + " ate " + player2.getName() + "!");
-            player2.resetSize();
+            
         } else {
             System.out.println(player2.getName() + " ate " + playername.getName() + "!");
-            playername.resetSize();
+            
         }
     }
 
